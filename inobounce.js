@@ -38,6 +38,11 @@
 				break;
 			}
 
+			// In order to solve the inability to scroll horizontally, the data set attribute inobounce="disabled" was added to disable inobounce
+			if (el.dataset.inobounce === 'disabled') {
+				return;
+			}
+
 			// Ignore range input element
 			if (el.nodeName === 'INPUT' && el.getAttribute('type') === 'range') {
 				return;
